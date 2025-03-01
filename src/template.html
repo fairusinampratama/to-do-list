@@ -1,0 +1,236 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <header>
+      <div class="sidebar-toggle" id="sidebar-toggle">
+        <span class="material-symbols-outlined" id="dock-icon"
+          >dock_to_right</span
+        >
+      </div>
+      <div class="app-title">
+        <span class="material-symbols-outlined app-title-icon">
+          checklist
+        </span>
+        <h1 class="app-title-text">Todo List</h1>
+      </div>
+      <div class="mode-toggle" id="mode-toggle">
+        <span class="material-symbols-outlined mode-toggle-icon">
+          dark_mode
+        </span>
+      </div>
+    </header>
+    <main>
+      <aside id="sidebar">
+        <div class="home-bar">
+          <h2 class="home-bar-title">Home</h2>
+          <button class="all-task-button">
+            <span class="material-symbols-outlined all-task-button-icon">
+              list
+            </span>
+            <span class="all-task-button-teks">All Task</span>
+          </button>
+        </div>
+        <div class="project-bar">
+          <h2 class="project-bar-title">My Project</h2>
+          <button class="add-project-button">Add Project</button>
+          <div class="project-list">
+            <div class="project-list-title">
+              <span class="material-symbols-outlined project-list-icon">
+                folder
+              </span>
+              <span class="project-list-label">1234567890</span>
+            </div>
+            <div class="project-list-button">
+              <button class="project-list-edit-button">Edit</button>
+              <button class="project-list-delete-button">Delete</button>
+            </div>
+          </div>
+          <div class="project-list">
+            <div class="project-list-title">
+              <span class="material-symbols-outlined project-list-icon">
+                folder
+              </span>
+              <span class="project-list-label">1234567890</span>
+            </div>
+            <div class="project-list-button">
+              <button class="project-list-edit-button">Edit</button>
+              <button class="project-list-delete-button">Delete</button>
+            </div>
+          </div>
+          <form class="project-list add">
+            <div class="project-list-title">
+              <span class="material-symbols-outlined project-list-icon">
+                folder
+              </span>
+              <input
+                type="text"
+                name="project-list-add-input"
+                id="project-list-add-input"
+                class="project-list-add-input"
+                placeholder=""
+              />
+            </div>
+            <div class="project-list-button">
+              <button type="submit" class="project-list-add-button">Add</button>
+              <button class="project-list-delete-button">Delete</button>
+            </div>
+          </form>
+        </div>
+      </aside>
+      <div class="content">
+        <h2 class="project-title">Project</h2>
+        <button class="add-task-button">Add Task</button>
+        <form class="add-task-form">
+          <div class="add-task-form-divide">
+            <div class="add-task-form-left">
+              <label for="add-task-title">Title:</label>
+              <input
+                type="text"
+                name="add-task-title"
+                id="add-task-title"
+                class="add-task-title"
+              />
+              <label for="add-task-description">Description:</label>
+              <textarea
+                name="add-task-description"
+                id="add-task-description"
+                class="add-task-description"
+              ></textarea>
+            </div>
+            <div class="add-task-form-right">
+              <label for="add-task-date">Date:</label>
+              <input
+                type="date"
+                name="add-task-date"
+                id="add-task-date"
+                class="add-task-date"
+              />
+              <label for="add-task-priority">Priority:</label>
+              <select
+                name="add-task-priority"
+                class="add-task-priority"
+                id="add-task-priority"
+              >
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+          </div>
+          <div class="add-task-button">
+            <button type="submit" class="add-task-button-add">Add</button>
+            <button type="reset" class="add-task-button-reset">Reset</button>
+            <button class="add-task-button-remove">Remove</button>
+          </div>
+        </form>
+        <div class="task-tile low">
+          <div class="task-tile-detail">
+            <span class="task-tile-priority"></span>
+            <input
+              type="checkbox"
+              name="task-tile-status"
+              id="task-tile-status"
+              class="task-tile-status"
+            />
+            <div class="task-tile-label">
+              <span class="task-tile-title"
+                >Memainkan pertandingan terakhir bersama Juventus</span
+              >
+              <span class="task-tile-description"
+                >Juventus merupakan tim terbesar di Italia dengan 9 kali
+                juaraliga beruntun</span
+              >
+            </div>
+          </div>
+          <div class="task-tile-action">
+            <span class="task-tile-date">03/10/2025</span>
+            <span class="material-symbols-outlined"> edit_square </span>
+            <span class="material-symbols-outlined"> delete </span>
+          </div>
+        </div>
+        <div class="task-tile medium">
+          <div class="task-tile-detail">
+            <span class="task-tile-priority"></span>
+            <input
+              type="checkbox"
+              name="task-tile-status"
+              id="task-tile-status"
+              class="task-tile-status"
+            />
+            <div class="task-tile-label">
+              <span class="task-tile-title"
+                >Memainkan pertandingan terakhir bersama Juventus</span
+              >
+              <span class="task-tile-description"
+                >Juventus merupakan tim terbesar di Italia dengan 9 kali
+                juaraliga beruntun</span
+              >
+            </div>
+          </div>
+          <div class="task-tile-action">
+            <span class="task-tile-date">03/10/2025</span>
+            <span class="material-symbols-outlined"> edit_square </span>
+            <span class="material-symbols-outlined"> delete </span>
+          </div>
+        </div>
+        <div class="task-tile high">
+          <div class="task-tile-detail">
+            <span class="task-tile-priority"></span>
+            <input
+              type="checkbox"
+              name="task-tile-status"
+              id="task-tile-status"
+              class="task-tile-status"
+            />
+            <div class="task-tile-label">
+              <span class="task-tile-title"
+                >Memainkan pertandingan terakhir bersama Juventus</span
+              >
+              <span class="task-tile-description"
+                >Juventus merupakan tim terbesar di Italia dengan 9 kali
+                juaraliga beruntun</span
+              >
+            </div>
+          </div>
+          <div class="task-tile-action">
+            <span class="task-tile-date">03/10/2025</span>
+            <span class="material-symbols-outlined"> edit_square </span>
+            <span class="material-symbols-outlined"> delete </span>
+          </div>
+        </div>
+        <div class="task-tile closed">
+          <div class="task-tile-detail">
+            <span class="task-tile-priority"></span>
+            <input
+              type="checkbox"
+              name="task-tile-status"
+              id="task-tile-status"
+              class="task-tile-status"
+            />
+            <div class="task-tile-label">
+              <span class="task-tile-title"
+                >Memainkan pertandingan terakhir bersama Juventus</span
+              >
+              <span class="task-tile-description"
+                >Juventus merupakan tim terbesar di Italia dengan 9 kali
+                juaraliga beruntun</span
+              >
+            </div>
+          </div>
+          <div class="task-tile-action">
+            <span class="task-tile-date">03/10/2025</span>
+            <span class="material-symbols-outlined"> edit_square </span>
+            <span class="material-symbols-outlined"> delete </span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      
+    </footer>
+  </body>
+</html>

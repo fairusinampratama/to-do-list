@@ -1,0 +1,335 @@
+@import "material-symbols";
+
+:root {
+  --background-color: #f8f3e6; /* Lighter cream background for better contrast */
+  --primary-color: #2a9d8f; /* Teal as primary color */
+  --text-color: #264653; /* Darker blue-gray for better readability */
+  --secondary-color: #f4a261; /* Peach as secondary */
+  --accent-color: #e76f51; /* Coral accent stays the same */
+  --accent-color-darker: #d05a3b; /* Darker coral for hover states */
+  font-size: 16px;
+}
+
+.dark-mode {
+  --background-color: #264653; /* Using text-color from root */
+  --primary-color: #2a9d8f; /* Same as root primary-color */
+  --text-color: #f8f3e6; /* Using background-color from root */
+  --secondary-color: #d05a3b; /* Using accent-color-darker from root */
+  --accent-color: #e76f51; /* Same as root accent-color */
+  --accent-color-darker: #f4a261; /* Using secondary-color from root */
+}
+
+.sidebar-toggle {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.mode-toggle {
+  cursor: pointer;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 2%;
+  border-bottom: 5px solid var(--accent-color);
+  background-color: var(--primary-color);
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-color);
+}
+
+.app-title-icon {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  height: 100%;
+}
+
+aside {
+  background-color: var(--secondary-color);
+  padding: 20px 2%;
+  width: 500px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px 20px;
+  gap: 10px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-color-darker);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-bar-title,
+.project-bar-title {
+  border-bottom: 5px solid var(--accent-color);
+}
+
+.project-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  background-color: var(--background-color);
+  padding: 10px 20px;
+  gap: 20px;
+  border-radius: 5px;
+}
+
+.project-list-title {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.project-list-button {
+  display: flex;
+  gap: 5px;
+}
+
+.project-list-edit-button,
+.project-list-add-button,
+.project-list-delete-button {
+  font-size: 0.8rem;
+  padding: 10px 15px;
+}
+
+.add-project-button {
+  justify-content: center;
+  width: 60%;
+  align-self: center;
+}
+
+.content {
+  width: 100%;
+  padding: 20px 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-title {
+  background-color: var(--primary-color);
+  padding: 20px 2%;
+  border-radius: 5px;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.add-task-button {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  align-self: center;
+}
+
+.task-tile {
+  display: flex;
+  background-color: var(--primary-color);
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  border: 3px solid var(--accent-color);
+  border-radius: 5px;
+}
+
+.task-tile-detail {
+  display: flex;
+  gap: 10px;
+}
+
+.task-tile-priority {
+  background-color: var(--accent-color);
+  width: 10px;
+}
+
+.task-tile-status[type="checkbox"] {
+  align-self: center;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--accent-color);
+  border-radius: 2px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.task-tile-status[type="checkbox"]:checked {
+  background-color: var(--accent-color);
+}
+
+.task-tile-status[type="checkbox"]:checked::after {
+  font-family: "Material Symbols Outlined";
+  content: "check";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.task-tile-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 20px;
+  width: 100%;
+}
+
+.task-tile-title {
+  font-weight: bold;
+}
+
+.task-tile-description {
+  font-size: 1rem;
+}
+
+.task-tile.closed .task-tile-label {
+  text-decoration: line-through;
+}
+
+.task-tile-action {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.task-tile-date {
+  border: 2px solid var(--accent-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.task-tile.high {
+  border-color: red;
+}
+
+.task-tile.high .task-tile-priority {
+  background-color: red;
+}
+
+.task-tile.medium {
+  border-color: yellow;
+}
+
+.task-tile.medium .task-tile-priority {
+  background-color: yellow;
+}
+
+.task-tile.low {
+  border-color: green;
+}
+
+.task-tile.low .task-tile-priority {
+  background-color: green;
+}
+
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  border: 5px solid var(--accent-color);
+  font-weight: bold;
+  background-color: var(--primary-color);
+}
+
+.add-task-form-divide {
+  display: flex;
+  gap: 20px;
+}
+
+.add-task-form-right,
+.add-task-form-left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.add-task-date-priority {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-task-button {
+  display: flex;
+  gap: 20px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+select {
+  appearance: none;
+  background-color: var(--background-color);
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
