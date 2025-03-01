@@ -1,22 +1,22 @@
 @import "material-symbols";
 
 :root {
-  --background-color: #f8f3e6; /* Lighter cream background for better contrast */
-  --primary-color: #2a9d8f; /* Teal as primary color */
-  --text-color: #264653; /* Darker blue-gray for better readability */
-  --secondary-color: #f4a261; /* Peach as secondary */
-  --accent-color: #e76f51; /* Coral accent stays the same */
+  --background-color: #eae2b7; /* Lighter cream background for better contrast */
+  --primary-color: #fcbf49; /* Teal as primary color */
+  --text-color: #d62828; /* Darker blue-gray for better readability */
+  --secondary-color: #003049; /* Peach as secondary */
+  --accent-color: #f77f00; /* Coral accent stays the same */
   --accent-color-darker: #d05a3b; /* Darker coral for hover states */
   font-size: 16px;
 }
 
 .dark-mode {
-  --background-color: #264653; /* Using text-color from root */
-  --primary-color: #2a9d8f; /* Same as root primary-color */
-  --text-color: #f8f3e6; /* Using background-color from root */
-  --secondary-color: #d05a3b; /* Using accent-color-darker from root */
-  --accent-color: #e76f51; /* Same as root accent-color */
-  --accent-color-darker: #f4a261; /* Using secondary-color from root */
+  --background-color: #d62828; /* Using text-color from root */
+  --primary-color: #003049; /* Same as root primary-color */
+  --text-color: #fcbf49; /* Using background-color from root */
+  --secondary-color: #f77f00; /* Using accent-color-darker from root */
+  --accent-color: #eae2b7; /* Same as root accent-color */
+  --accent-color-darker: #ee9d47; /* Using secondary-color from root */
 }
 
 .sidebar-toggle {
@@ -101,7 +101,8 @@ button:hover {
 
 .home-bar-title,
 .project-bar-title {
-  border-bottom: 5px solid var(--accent-color);
+  color: var(--background-color);
+  border-bottom: 5px solid var(--background-color);
 }
 
 .project-list {
