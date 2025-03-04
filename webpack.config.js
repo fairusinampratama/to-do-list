@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: "./src/controller/index.js",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
@@ -12,11 +12,12 @@ module.exports = {
   devtool: "eval-source-map",
   devServer: {
     static: path.resolve(__dirname, "dist"),
-    watchFiles: ["./src/template.html"],
+    watchFiles: ["./src/view/template.html"],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/template.html",
+      template: "./src/view/template.html",
+      favicon: "./img/check-lists-square-svgrepo-com.svg"
     }),
   ],
   module: {

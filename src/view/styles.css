@@ -32,23 +32,28 @@
 }
 
 body {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  transition: all 0.3s ease-in-out;
+  min-height: 100vh;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 2%;
+  padding: 0 2%;
   border-bottom: 5px solid var(--accent-color);
   background-color: var(--primary-color);
+  min-height: 15vh;
+}
+
+main {
+  display: flex;
+  min-height: 80vh;
 }
 
 .app-title {
@@ -63,9 +68,9 @@ header {
   font-weight: bold;
 }
 
-main {
-  display: flex;
-  height: 100%;
+.header-icon:hover {
+  color: var(--accent-color);
+  transition: all 0.3s ease-in-out;
 }
 
 aside {
@@ -96,13 +101,18 @@ button:hover {
 .project-bar {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .home-bar-title,
 .project-bar-title {
   color: var(--background-color);
   border-bottom: 5px solid var(--background-color);
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .project-list {
@@ -114,6 +124,21 @@ button:hover {
   padding: 10px 20px;
   gap: 20px;
   border-radius: 5px;
+}
+
+.project-list:hover {
+  background-color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-list-label {
+  cursor: pointer;
+}
+
+.project-list.add-project-form,
+.project-content {
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
 
 .project-list-title {
@@ -129,6 +154,7 @@ button:hover {
 
 .project-list-edit-button,
 .project-list-add-button,
+.project-list-cancel-button,
 .project-list-delete-button {
   font-size: 0.8rem;
   padding: 10px 15px;
@@ -156,7 +182,7 @@ button:hover {
   color: var(--text-color);
 }
 
-.add-task-button {
+.task-button {
   display: flex;
   justify-content: center;
   width: 20%;
@@ -171,6 +197,12 @@ button:hover {
   font-size: 1.2rem;
   border: 3px solid var(--accent-color);
   border-radius: 5px;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .task-tile-detail {
@@ -244,6 +276,18 @@ button:hover {
   font-weight: bold;
 }
 
+.task-tile-edit-button,
+.task-tile-delete-button {
+  cursor: pointer;
+}
+
+.task-tile-edit-button:hover,
+.task-tile-delete-button:hover {
+  cursor: pointer;
+  color: var(--accent-color-darker);
+  transition: all 0.3s ease-in-out;
+}
+
 .task-tile.high {
   border-color: red;
 }
@@ -268,7 +312,7 @@ button:hover {
   background-color: green;
 }
 
-.add-task-form {
+.task-form {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -276,26 +320,27 @@ button:hover {
   border: 5px solid var(--accent-color);
   font-weight: bold;
   background-color: var(--primary-color);
+  margin: 10 0;
 }
 
-.add-task-form-divide {
+.task-form-divide {
   display: flex;
   gap: 20px;
 }
 
-.add-task-form-right,
-.add-task-form-left {
+.task-form-right,
+.task-form-left {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.add-task-date-priority {
+.task-date-priority {
   display: flex;
   justify-content: space-between;
 }
 
-.add-task-button {
+.task-button {
   display: flex;
   gap: 20px;
 }
